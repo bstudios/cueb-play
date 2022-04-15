@@ -64,9 +64,4 @@ const logger = createLogger({
 });
 addColors(logLevels.colors);
 
-logger.log({
-  level: 'info',
-  message: 'Booting application',
-});
-
 export default logger;

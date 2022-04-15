@@ -88,3 +88,7 @@ typings/
 # Electron-Forge
 out/
 dist/
+
+# Project
+
+database.sqlite*

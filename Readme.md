@@ -21,6 +21,12 @@ To package the app for distribution, run the following command from your command
 npm run make
 ```
 
+When using the TypeORM cli be sure to prefix with `npm run` e.g:
+
+```bash
+npm run typeorm migration:generate -n src/database/migration/example
+```
+
 ## Contributing
 
 Pull requests are welcome - feel free to open an issue as well.
@@ -31,9 +37,9 @@ Pull requests are welcome - feel free to open an issue as well.
  - Framework: [React](https://github.com/facebook/react)
  - Styling: [TailwindCSS](https://github.com/tailwindlabs/tailwindcss)
  - Logging: [Winston](https://github.com/winstonjs/winston)
- - ORM: [Sequelize](https://github.com/sequelize/sequelize) 
- - Database: [Sqlite](https://sqlite.org)
- - Database Migrations: [Umzug](https://github.com/sequelize/umzug)
+ - ORM: [Typeorm](https://github.com/typeorm/typeorm) 
+ - Database: [Sqlite3](https://sqlite.org)
+ - Audio Playback: [Howler.js](https://github.com/goldfire/howler.js)
 
 ## License
 
