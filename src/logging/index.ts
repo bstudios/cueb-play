@@ -1,4 +1,5 @@
 import { createLogger, format, transports, addColors } from 'winston';
+import DailyRotateFile from 'winston-daily-rotate-file';
 import fs from 'fs';
 
 const logDir = 'logs';
@@ -41,15 +42,23 @@ const logger = createLogger({
         format.json()
       )
     }),
-    new transports.File({ 
-      filename: `./${logDir}/combined.log`,
-      level: 'silly',
-      format: format.json()
+    new DailyRotateFile({
+      filename: 'combined-%DATE%.log',
+      dirname: logDir,
+      datePattern: 'YYYY-MM-DD-HH',
+      zippedArchive: false,
+      maxSize: '20m',
+      maxFiles: '5'
     })
   ],
   exceptionHandlers: [
-    new transports.File({ 
-      filename: `./${logDir}/exceptions.log`
+    new DailyRotateFile({
+      filename: 'exceptions-%DATE%.log',
+      dirname: logDir,
+      datePattern: 'YYYY-MM-DD-HH',
+      zippedArchive: false,
+      maxSize: '20m',
+      maxFiles: '2'
     })
   ]
 });
@@ -57,7 +66,7 @@ addColors(logLevels.colors);
 
 logger.log({
   level: 'info',
-  message: 'Logging initialized',
+  message: 'Booting application',
 });
 
 export default logger;

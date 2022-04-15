@@ -4,7 +4,7 @@ Pronounced `kyo͞ob plā` (cube play), CueB Play is a Sound and Video playback p
 
 ## Installation
 
-To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed. From your command line:
 
 ```bash
 # Install dependencies
@@ -18,13 +18,20 @@ npm start
 To package the app for distribution, run the following command from your command line:
 
 ```bash
-npm run build
+npm run make
 ```
-
 
 ## Contributing
 
 Pull requests are welcome - feel free to open an issue as well.
+
+## Stack
+
+ - [Electron](https://github.com/electron/electron)
+ - Framework: [React](https://github.com/facebook/react)
+ - Styling: [TailwindCSS](https://github.com/tailwindlabs/tailwindcss)
+ - Logging: [Winston](https://github.com/winstonjs/winston)
+ - ORM: [Sequelize](https://github.com/sequelize/sequelize) 
 
 ## License
 
