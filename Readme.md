@@ -32,6 +32,8 @@ Pull requests are welcome - feel free to open an issue as well.
  - Styling: [TailwindCSS](https://github.com/tailwindlabs/tailwindcss)
  - Logging: [Winston](https://github.com/winstonjs/winston)
  - ORM: [Sequelize](https://github.com/sequelize/sequelize) 
+ - Database: [Sqlite](https://sqlite.org)
+ - Database Migrations: [Umzug](https://github.com/sequelize/umzug)
 
 ## License
 

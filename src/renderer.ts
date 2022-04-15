@@ -26,6 +26,11 @@
  * ```
  */
 
+openFile("test.sqlite3").then(database => {
+  console.log("hello")
+});
+
 console.log('👋 This message is being logged by "renderer.js", included via webpack');
 
 import './app/app.tsx';
+import { openFile } from './database/fileHandler';
